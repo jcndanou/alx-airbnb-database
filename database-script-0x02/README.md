@@ -1,0 +1,2 @@
+# seed.sql
+These SQL operations consist of inserting concrete data into the previously created tables. They populate the database with user records, properties, reservations, payments, reviews, and messages, thus illustrating how a platform like AirBnB works with examples.

@@ -1,0 +1,2 @@
+# Schema.sql
+These SQL operations create six fundamental tables (User, Property, Booking, Payment, Review, Message) for an AirBnB-type database. They define each table's columns, their data types, primary keys, uniqueness and non-nullity constraints, and foreign keys to establish relationships between them. Finally, indexes are added to optimize query performance.
