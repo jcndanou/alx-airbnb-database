@@ -1,0 +1,3 @@
+# 3FN
+User, Property, Booking, Payment, Review, Message:
+Each of these tables is designed atomically. All non-key attributes (such as first_name, name, start_date, amount, rating, message_body) depend directly on their respective primary keys (user_id, property_id, booking_id, payment_id, review_id, message_id) and do not depend on other non-key attributes within the same table. The schema is already well-designed and complies with 3FN. Entities are well separated, and relationships are established via foreign keys, avoiding redundancy and update anomalies.
