@@ -34,6 +34,8 @@ FROM
     "Property" AS P
 LEFT JOIN
     "Review" AS R ON P.property_id = R.property_id;
+ORDER BY
+    R.rating DESC
 
 ---
 
