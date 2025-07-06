@@ -25,7 +25,12 @@ JOIN
 JOIN
     "Property" AS P ON B.property_id = P.property_id
 LEFT JOIN
-    "Payment" AS PAY ON B.booking_id = PAY.booking_id;
+    "Payment" AS PAY ON B.booking_id = PAY.booking_id
+WHERE
+    B.status = 'confirmed'
+    AND B.start_date >= '2025-07-01';
+
+
 
 --  requête optimiser qui récupère toutes les réservations avec les détails de l'utilisateur, de la propriété sans les infos du paiement
 EXPLAIN ANALYZE
@@ -41,4 +46,7 @@ FROM
 JOIN
     "User" AS U ON B.user_id = U.user_id
 JOIN
-    "Property" AS P ON B.property_id = P.property_id;
+    "Property" AS P ON B.property_id = P.property_id
+WHERE
+    B.status = 'confirmed'
+    AND B.start_date >= '2025-07-01';
