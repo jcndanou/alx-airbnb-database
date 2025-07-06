@@ -24,3 +24,15 @@ CREATE INDEX IF NOT EXISTS idx_review_user_id ON "Review" (user_id);
 -- Index sur l'expéditeur et le destinataire pour les messages
 CREATE INDEX IF NOT EXISTS idx_message_sender_id ON "Message" (sender_id);
 CREATE INDEX IF NOT EXISTS idx_message_recipient_id ON "Message" (recipient_id);
+
+-- Test
+EXPLAIN ANALYZE
+SELECT
+    user_id,
+    first_name,
+    last_name,
+    email
+FROM
+    "User"
+WHERE
+    email = 'user10@example.com';
